@@ -19,6 +19,9 @@ export default {
             if(this.quoteAmount >= 10){
                 return alert('No more quotes');
             }
+            if(this.quoteText === ''){
+                return alert('Please input some word.');
+            }
             this.quoteAmount++;
             quoteBus.$emit('addQuote', {
                 quoteText: this.quoteText, 
