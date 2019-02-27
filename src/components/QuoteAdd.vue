@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <h4 class="text">Quote</h4>
-        <textarea v-model="quoteText" name="Quote" cols="70" rows="10"></textarea>
-        <button @click="addQuote">Add Quote</button>
+        <textarea @keypress.enter.prevent="addQuote" v-model="quoteText" name="Quote" cols="70" rows="10"></textarea>
+        <button @click.prevent="addQuote">Add Quote</button>
     </div>
 </template>
 <script>
